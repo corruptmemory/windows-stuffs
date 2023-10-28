@@ -22,6 +22,15 @@
 }
 
 
+!#Enter::
+{
+    Run 'C:\Program Files\Alacritty\alacritty.exe -T "Arch" -e C:\Arch\Arch.exe', "C:\Users\jim",,&OutputVarPID
+    WinWait "ahk_pid " OutputVarPID
+    WinActivate "ahk_pid " OutputVarPID
+    WinMoveTop "ahk_pid " OutputVarPID
+}
+
+
 ^F9::
 {
     Run "C:\Program Files\Mozilla Firefox\firefox.exe"
