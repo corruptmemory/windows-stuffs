@@ -1,33 +1,22 @@
 #Enter::
 {
-    Run 'C:\Program Files\Alacritty\alacritty.exe -T "Git Bash" -e C:\Program Files\Git\bin\bash.exe', "C:\Users\jim",,&OutputVarPID
-    WinWait "ahk_pid " OutputVarPID
-    WinActivate "ahk_pid " OutputVarPID
-    WinMoveTop "ahk_pid " OutputVarPID
+    Run 'wt --window new new-tab --profile "Git Bash"', "C:\Users\jim"
 }
 
 ^#Enter::
 {
-    Run 'C:\Program Files\Alacritty\alacritty.exe -T "PowerShell" -e C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe', "C:\Users\jim",,&OutputVarPID
-    WinWait "ahk_pid " OutputVarPID
-    WinActivate "ahk_pid " OutputVarPID
-    WinMoveTop "ahk_pid " OutputVarPID
+    Run 'wt --window new new-tab --profile "Windows PowerShell"', "C:\Users\jim"
 }
 
 !^#Enter::
 {
-    Run '*RunAs C:\Program Files\Alacritty\alacritty.exe -T "Admin PowerShell" -e C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe', "C:\Users\jim",,&OutputVarPID
-    WinWait "ahk_pid " OutputVarPID
-    WinActivate "ahk_pid " OutputVarPID
+    Run 'wt --window new new-tab --profile "Admin - PowerShell"', "C:\Users\jim"
 }
 
 
 !#Enter::
 {
-    Run 'C:\Program Files\Alacritty\alacritty.exe -T "Arch" -e C:\Arch\Arch.exe', "C:\Users\jim",,&OutputVarPID
-    WinWait "ahk_pid " OutputVarPID
-    WinActivate "ahk_pid " OutputVarPID
-    WinMoveTop "ahk_pid " OutputVarPID
+    Run 'wt --window new new-tab --profile "Arch"', "C:\Users\jim"
 }
 
 
